@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.13.0/build/cssnormalize/cssnormalize-min.css">
+    <link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Conway's Game of Life</h1>
+        <div id="game-container">
+        </div>
+        <div id="controls">
+            <div id="generation-container">
+                <h4>Please Select a pattern and the game will Start: </h4>
+            </div>
+            <div id="pattern-list">
+                <ul class="list">
+                    <li id='reset'><h4><a>Reset Game</a></h4></li>
+                    <li id='random'><h4><a>Random</a></h4></li>
+                    <li id='oscillator1'><h4><a>Oscillator1</a></h4></li>
+                    <li id='oscillator2'><h4><a>Oscillator2</a></h4></li>
+                    <li id='stillife'><h4><a>Stillife</a></h4></li>
+                    <li id='glider'><h4><a>Glider</a></h4></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="jQuery-v2-0-3.js"></script>
+    <script src="board.js"></script>
+    <script src="cell.js"></script>
+    <script src="game.js"></script>
+    <script src="gol.js"></script>
+</body>
+</html>
