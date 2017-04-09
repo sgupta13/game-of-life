@@ -3,19 +3,23 @@
 <head>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.13.0/build/cssnormalize/cssnormalize-min.css">
     <link rel="stylesheet" type="text/css" href="game.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react-with-addons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="container">
-        <h1>Conway's Game of Life</h1>
+        <h1>Conway's Game of Life with real time tracking using React JS</h1>
         <div id="game-container">
         </div>
         <div id="controls">
             <div id="generation-container">
-                <h4>Please Select a pattern and the game will Start: </h4>
+                <h4>Please Select a pattern and the game will Start: </h4><br />
             </div>
             <div id="pattern-list">
                 <ul class="list">
-                    <li id='reset'><h4><a>Reset Game</a></h4></li>
+                    <li id='reset'><h4><a>Reset/Stop Game</a></h4></li>
                     <li id='random'><h4><a>Random</a></h4></li>
                     <li id='oscillator1'><h4><a>Oscillator1</a></h4></li>
                     <li id='oscillator2'><h4><a>Oscillator2</a></h4></li>
@@ -25,6 +29,25 @@
             </div>
         </div>
     </div>
+	<div id="content"></div>
+    <script type="text/babel">
+        var ReactForm = React.createClass({
+            render: function(){ //render instances
+                return (
+                    <div>
+                        <label>{this.state.randomInitialCoordinates}</label> <br/>
+                        <label>{this.state.gliderInitialCoordinates}</label> <br/>
+                        <label>{this.state.oscillator1InitialCoordinates}</label> <br/>
+                        <label>{this.state.oscillator2InitialCoordinates}</label><br/>
+						<label>{this.state.stillifeInitialCoordinates}</label> <br/>
+                    </div>
+                )
+            }
+        });
+        ReactDOM.render(
+            document.getElementById('content')
+        )
+    </script>
     <script src="jQuery-v2-0-3.js"></script>
     <script src="board.js"></script>
     <script src="cell.js"></script>

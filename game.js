@@ -88,6 +88,7 @@ Game.prototype.displayGenerationCounter = function(){
   output += "<h4>"
   output += "Generation: " + this.generationCount
   output += "</h4>"
+  counter.html('Real Time tracking using React JS: ')
   counter.html(output)
 }
 
